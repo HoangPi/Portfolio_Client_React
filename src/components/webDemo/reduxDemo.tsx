@@ -42,7 +42,7 @@ export const ReduxDemo = () => {
     }, [timeRemain, lastName])
 
     return <div id="ReduxDemo" className="w-full">
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 pt-6">
             <div className="">
                 <h1 className="text-4xl mb-3"><strong>Redux</strong></h1>
                 <p>Redux library provides tool for controlling global states, persists stated and also secures it.</p>

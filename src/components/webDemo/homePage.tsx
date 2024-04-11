@@ -90,7 +90,7 @@ export const HomePage = () => {
                 <li>Only admin can delete self-account (or other admin's account if you somehow be able to tamper the token correctly).</li>
                 <li>Admin can delete other users' accounts in admin panel if admin can verify that user's password.</li>
                 <li>To create an admin account, add "admin" at the start of your username.</li>
-                <li>Token only last for 5 minutes.</li>
+                <li>Token only lasts for 5 minutes.</li>
                 <li>Update your name to refresh your token.</li>
             </ul>
         </div>
