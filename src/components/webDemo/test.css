@@ -1,0 +1,5 @@
+.true-sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    transform: translateX(-30%), translateY(-30%);
+}

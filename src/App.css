@@ -1,0 +1,86 @@
+
+.align-middle {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@keyframes spinny {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes top-down-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+@keyframes left-to-right-appear {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+@keyframes right-to-left-appear {
+    0% {
+        opacity: 0;
+        transform: translateX(60px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+.appear-left-to-right {
+    animation: left-to-right-appear .3s;
+}
+
+.appear-left-to-right-reversed {
+    opacity: 0;
+    animation: left-to-right-appear .3s;
+    animation-direction: reverse;
+}
+
+.appear-right-to-left {
+    animation: right-to-left-appear .3s;
+}
+
+.appear-right-to-left-reversed {
+    opacity: 0;
+    animation: right-to-left-appear .3s;
+    animation-direction: reverse;
+}
+
+.appear-top-to-bot{
+    animation: top-down-appear 0.3s;
+}
+.appear-top-to-bot-reversed{
+    opacity: 0;
+    animation: top-down-appear 0.3s;
+    animation-direction: reverse;
+}
+.spinning-item{
+    animation: spinny 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
