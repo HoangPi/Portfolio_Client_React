@@ -39,6 +39,7 @@ export const SignIn = () => {
             body: JSON.stringify({username, password})
         })
         const resData = await res.json()
+        console.log(resData)
         if(!resData.access_token){
             toast("Incorrect credential information")
             return
