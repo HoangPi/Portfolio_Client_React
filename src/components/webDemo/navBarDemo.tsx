@@ -1,35 +1,11 @@
-import { useEffect } from "react"
-import { useAppDispatch, useAppSelector } from "../../store/hook"
+import { useAppDispatch } from "../../store/hook"
 import { deleteToken } from "../../store/tokenSlice"
-import { Link, useNavigate } from "react-router-dom"
-import { baseURL } from "../../constants"
+import { Link } from "react-router-dom"
 // import { ToastContainer, toast } from "react-toastify"
 // import 'react-toastify/dist/ReactToastify.css';
 
 export const NavBarDemo = () => {
-    const accessToken = useAppSelector(state => state.tokenSlice.value)
     const dispatch = useAppDispatch()
-    const navigate = useNavigate()
-    useEffect(()=>{
-        const verifyToken = async (token: string)=>{
-            const res = await fetch(`${baseURL}/user`,{
-                headers:{
-                    "Content-Type" :"application/json",
-                    "Authentication": `Bearer ${token}`
-                },
-                method: "GET"
-            })
-            const resData = await res.json()
-            if(!resData.userid){
-                dispatch(deleteToken())
-                navigate('/signin')
-                return
-            }
-            // toast(`Welcome back ${resData.role} ${resData.fullname}`)
-            navigate('/')
-        }
-        // verifyToken(accessToken)
-    },[])
     return <div className="px-4 py-6 h-full sticky border-r-2 border-slate-500">
         {/* <ToastContainer /> */}
         <h1 className="mt-2"><strong>Navigator</strong></h1>
